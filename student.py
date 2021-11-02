@@ -58,7 +58,7 @@ class Piggy(PiggyParent):
     ****************
     '''
     def skri(self):
-      deg_fwd(360)
+      self.deg_fwd(360)
 
     def vanek(self):
       
