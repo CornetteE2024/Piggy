@@ -60,7 +60,7 @@ class Piggy(PiggyParent):
     def skri(self):
       self.deg_fwd(360)
       self.right(primary = 40, counter = -40)
-      self.time.sleep(1)
+      time.sleep(1)
       self.stop()
 
     def vanek(self):
