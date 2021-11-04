@@ -60,30 +60,27 @@ class Piggy(PiggyParent):
 
     #Square = Skri Test
     def skri(self):
+      self.fwd(360)
+      time.sleep(2)
+      self.stop()
+      self.right(primary = 40, counter = -40)
+      time.sleep(.15)
       self.fwd()
       time.sleep(2)
       self.stop()
       self.right(primary = 40, counter = -40)
-      time.sleep(1)
-      self.stop()
-      '''
-      self.deg_fwd(360)
-      time.sleep(2)
-      self.right(primary = 40, counter = -40)
-      time.sleep(.15)
-      self.deg_fwd(360)
-      time.sleep(2)
-      self.right(primary = 40, counter = -40)
       time.sleep(.15) 
+      self.fwd()
       time.sleep(2)
+      self.stop()
       self.right(primary = 40, counter = -40)
       time.sleep(.15)
-      self.deg_fwd(360)
+      self.fwd()
       time.sleep(2)
+      self.stop()
       self.right(primary = 40, counter = -40)
       time.sleep(.15)
       self.stop()
-      '''
 
 #Decided to keep the Vanek Test anyways for reference
     def vanek(self):
