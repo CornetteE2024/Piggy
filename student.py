@@ -60,7 +60,7 @@ class Piggy(PiggyParent):
 
     #Square = Skri Test
     def skri(self):
-      self.deg_fwd(360)
+      self.fwd()
       time.sleep(2)
       self.stop()
       self.right(primary = 40, counter = -40)
@@ -74,8 +74,7 @@ class Piggy(PiggyParent):
       self.deg_fwd(360)
       time.sleep(2)
       self.right(primary = 40, counter = -40)
-      time.sleep(.15)
-      self.deg_fwd(360)
+      time.sleep(.15) 
       time.sleep(2)
       self.right(primary = 40, counter = -40)
       time.sleep(.15)
