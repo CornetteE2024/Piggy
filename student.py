@@ -60,17 +60,17 @@ class Piggy(PiggyParent):
     '''
 
     def Do_A_Jig(self):
-      for _ in range(13):
+      for _ in range(7):
         self.back()
-        time.sleep(.5)
+        time.sleep(.15)
         self.stop()
-        self.right(primary = 20, counter = -20)
+        self.right(primary = 60, counter = -60)
         time.sleep(.25)
         self.stop()
         self.back()
-        time.sleep(.5)
+        time.sleep(.15)
         self.stop()
-        self.left(primary = 20, counter = -20)
+        self.left(primary = 60, counter = -60)
         time.sleep(.25)
         self.stop()
 
