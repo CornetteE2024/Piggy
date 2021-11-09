@@ -58,9 +58,23 @@ class Piggy(PiggyParent):
     ****************
     '''
 
+    def Do_A_Jig(self):
+      for _ in range(13):
+        self.backward()
+        time.sleep(.5)
+        self.stop()
+        self.right(primary = 20, counter = -20)
+        time.sleep(.25)
+        self.stop()
+        self.backward()
+        time.sleep(.5)
+        self.stop()
+        self.left(primary = 20, counter = -20)
+        time.sleep(.25)
+        self.stop()
+
     #Square = Skri Test
     def skri(self):
-
       #D.R.Y.
       for _ in range (4):
         self.fwd()
@@ -71,6 +85,7 @@ class Piggy(PiggyParent):
         self.stop()
 
 #Decided to keep the Vanek Test anyways for reference
+
     def vanek(self):
       
       for i in range(4):
