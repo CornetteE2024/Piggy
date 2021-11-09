@@ -62,33 +62,13 @@ class Piggy(PiggyParent):
     def skri(self):
 
       #D.R.Y.
-      self.fwd()
-      time.sleep(2)
-      self.stop()
-      self.right(primary = 40, counter = -40)
-      time.sleep(1)
-      self.stop()
-
-      self.fwd()
-      time.sleep(2)
-      self.stop()
-      self.right(primary = 40, counter = -40)
-      time.sleep(1) 
-      self.stop()
-
-      self.fwd()
-      time.sleep(2)
-      self.stop()
-      self.right(primary = 40, counter = -40)
-      time.sleep(1)
-      self.stop()
-
-      self.fwd()
-      time.sleep(2)
-      self.stop()
-      self.right(primary = 40, counter = -40)
-      time.sleep(1)
-      self.stop()
+      for _ in range (4):
+        self.fwd()
+        time.sleep(2)
+        self.stop()
+        self.right(primary = 40, counter = -40)
+        time.sleep(.75)
+        self.stop()
 
 #Decided to keep the Vanek Test anyways for reference
     def vanek(self):
