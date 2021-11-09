@@ -67,7 +67,7 @@ class Piggy(PiggyParent):
         time.sleep(2)
         self.stop()
         self.right(primary = 40, counter = -40)
-        time.sleep(.75)
+        time.sleep(.95)
         self.stop()
 
 #Decided to keep the Vanek Test anyways for reference
