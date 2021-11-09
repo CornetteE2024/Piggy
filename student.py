@@ -61,13 +61,13 @@ class Piggy(PiggyParent):
 
     def Do_A_Jig(self):
       for _ in range(13):
-        self.backward()
+        self.back()
         time.sleep(.5)
         self.stop()
         self.right(primary = 20, counter = -20)
         time.sleep(.25)
         self.stop()
-        self.backward()
+        self.back()
         time.sleep(.5)
         self.stop()
         self.left(primary = 20, counter = -20)
