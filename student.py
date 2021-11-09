@@ -61,7 +61,7 @@ class Piggy(PiggyParent):
     #Square = Skri Test
     def skri(self):
 
-      D.R.Y.
+      #D.R.Y.
       self.fwd()
       time.sleep(2)
       self.stop()
@@ -82,7 +82,7 @@ class Piggy(PiggyParent):
       self.right(primary = 40, counter = -40)
       time.sleep(1)
       self.stop()
-      
+
       self.fwd()
       time.sleep(2)
       self.stop()
