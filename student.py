@@ -60,6 +60,8 @@ class Piggy(PiggyParent):
     '''
 
     def Do_A_Jig(self):
+      if safe_to_dance():
+        pass
       for _ in range(13):
         self.back()
         time.sleep(.15)
@@ -88,13 +90,11 @@ class Piggy(PiggyParent):
 #Decided to keep the Vanek Test anyways for reference
 
     def vanek(self):
-      
-      for i in range(4):
-        self.fwd()
-        time.sleep(2)
-        self.stop()
-        self.turn_by_deg(90)
-      
+      while True:
+        self.read_distance()
+      pass
+    
+    '''
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
@@ -103,11 +103,11 @@ class Piggy(PiggyParent):
         self.right(primary=50, counter=50)
         time.sleep(2)
         self.stop()
-        
+        '''
 
     def safe_to_dance(self):
         """ Does a 360 distance check and returns true if safe """
-        pass
+        return True
 
     def shake(self):
         """ Another example move """
