@@ -92,7 +92,6 @@ class Piggy(PiggyParent):
     def vanek(self):
       while True:
         self.read_distance()
-      pass
     
     '''
     def dance(self):
