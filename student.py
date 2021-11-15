@@ -95,6 +95,7 @@ class Piggy(PiggyParent):
         self.read_distance()
         if self.read_distance() < 100:
           self.stop()
+          break
         else:
           self.fwd()
         
