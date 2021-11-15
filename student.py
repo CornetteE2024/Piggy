@@ -43,7 +43,8 @@ class Piggy(PiggyParent):
                 "q": ("Quit", self.quit),
                 "v": ("Vanek Test", self.vanek),
                 "x": ("Skri Test", self.skri),
-                "j": ("Do A Jig", self.Do_A_Jig)
+                "j": ("Do A Jig", self.Do_A_Jig),
+                "l": ("Find Wall and Spin", self.spin_wall)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -97,8 +98,22 @@ class Piggy(PiggyParent):
         else:
           self.fwd()
         
-    
-    
+
+    def spin_wall(self):
+      while True:
+        self.read_distance()
+        if self.read_distance() < 20:
+          self.stop()
+          self.right(primary = 40, counter = -40)
+          time.sleep(2)
+          self.stop()
+          self.fwd()
+          time.sleep(2)
+          self.stop()
+        else:
+          self.fwd()
+
+
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
