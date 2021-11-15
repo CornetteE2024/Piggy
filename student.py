@@ -103,7 +103,7 @@ class Piggy(PiggyParent):
     def spin_wall(self):
       while True:
         self.read_distance()
-        if self.read_distance() < 20:
+        if self.read_distance() < 100:
           self.stop()
           self.right(primary = 40, counter = -40)
           time.sleep(2)
