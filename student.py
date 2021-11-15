@@ -91,7 +91,7 @@ class Piggy(PiggyParent):
 
     def vanek(self):
       while True:
-        self.read_distance()
+        self.read_distance(distance <= 20)
         
     
     '''
