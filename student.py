@@ -44,7 +44,8 @@ class Piggy(PiggyParent):
                 "v": ("Vanek Test", self.vanek),
                 "x": ("Skri Test", self.skri),
                 "j": ("Do A Jig", self.Do_A_Jig),
-                "l": ("Find Wall and Spin", self.spin_wall)
+                "l": ("Find Wall and Spin", self.spin_wall),
+                "w": ("Avoid boxes", self.Avoid_Box)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -59,6 +60,31 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
+
+    def Avoid_Box(self):
+      while True:
+        self.read_distance()
+        if self.read_distance() < 200:
+          self.stop()
+          self.right(primary = 40, counter = -40)
+          time.sleep(.85)
+          self.stop()
+          self.fwd()
+          time.sleep(.5)
+          self.stop()
+          self.servo(1250)
+          self.read_distance()
+          if self.read_distance() < 200:
+            self.fwd()
+          elif self.read_distance() > 200:
+            self.left(primary = 40, counter = -40)
+            time.sleep(.85)
+        else:
+          self.fwd()
+
+    #use self.servo(#) to move head left and right for when I have to find out which way    to go.
+
+
 
     def Do_A_Jig(self):
       if safe_to_dance():
@@ -77,6 +103,9 @@ class Piggy(PiggyParent):
         time.sleep(.25)
         self.stop()
 
+
+
+
     #Square = Skri Test
     def skri(self):
       #D.R.Y.
@@ -87,6 +116,10 @@ class Piggy(PiggyParent):
         self.right(primary = 40, counter = -40)
         time.sleep(.96)
         self.stop()
+
+
+
+
 
 #Decided to keep the Vanek Test anyways for reference
 
@@ -100,19 +133,25 @@ class Piggy(PiggyParent):
           self.fwd()
         
 
+
+
+
     def spin_wall(self):
       while True:
         self.read_distance()
         if self.read_distance() < 100:
           self.stop()
           self.right(primary = 40, counter = -40)
-          time.sleep(2)
+          time.sleep(1.75)
           self.stop()
           self.fwd()
           time.sleep(2)
           self.stop()
         else:
           self.fwd()
+
+
+
 
 
     def dance(self):
@@ -125,14 +164,26 @@ class Piggy(PiggyParent):
         self.stop()
         
 
+
+
+
+
     def safe_to_dance(self):
         """ Does a 360 distance check and returns true if safe """
         return True
+
+
+
+
 
     def shake(self):
         """ Another example move """
         self.deg_fwd(720)
         self.stop()
+
+
+
+
 
     def example_move(self):
         """this is an example dance move that should be replaced by student-created content"""
@@ -143,15 +194,29 @@ class Piggy(PiggyParent):
         time.sleep(.25) # give your head time to move
         self.servo(2000) # look left
 
+
+
+
+
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
         for angle in range(self.MIDPOINT-350, self.MIDPOINT+350, 3):
             self.servo(angle)
             self.scan_data[angle] = self.read_distance()
 
+
+
+
+
+
     def obstacle_count(self):
         """Does a 360 scan and returns the number of obstacles it sees"""
         pass
+
+
+
+
+
 
     def nav(self):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
