@@ -91,6 +91,8 @@ class Piggy(PiggyParent):
             self.left()
             time.sleep(1)
             self.fwd()
+          else:
+            print("None")
         else:
           print("FWD")
           self.fwd()
