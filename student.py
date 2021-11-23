@@ -74,6 +74,7 @@ class Piggy(PiggyParent):
           idk_2 = self.read_distance()
           self.stop()
           if idk_1 > idk_2:
+            print("Left")
             self.left()
             time.sleep(1)
             self.fwd()
@@ -82,6 +83,7 @@ class Piggy(PiggyParent):
             time.sleep(1)
             self.fwd()
           elif idk_1 > idk_2:
+            print("Right")
             self.right()
             time.sleep(1)
             self.fwd()
@@ -90,6 +92,7 @@ class Piggy(PiggyParent):
             time.sleep(1)
             self.fwd()
         else:
+          print("FWD")
           self.fwd()
 
 
