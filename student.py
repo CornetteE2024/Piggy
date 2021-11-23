@@ -62,6 +62,8 @@ class Piggy(PiggyParent):
     '''
 
     def Avoid_Box(self):
+      self.left()
+      time.sleep(3)
       while True:
         self.read_distance()
         if self.read_distance() < 200:
@@ -72,7 +74,7 @@ class Piggy(PiggyParent):
           self.fwd()
           time.sleep(1)
           self.stop()
-          self.left(primary = -40, counter = 40)
+          self.left()
           time.sleep(3)
           self.fwd()
           #self.servo(1750)
