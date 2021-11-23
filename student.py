@@ -69,9 +69,11 @@ class Piggy(PiggyParent):
           self.servo(1200)
           time.sleep(1)
           idk_1 = self.read_distance()
+          print ("leFt: " + str(idk_1))
           self.servo(600)
           time.sleep(1)
           idk_2 = self.read_distance()
+          print ("Right: " + str(idk_2))
           self.stop()
           if idk_1 > idk_2:
             print("Left")
@@ -92,7 +94,7 @@ class Piggy(PiggyParent):
             time.sleep(1)
             self.fwd()
           else:
-            print("None")
+            print()
         else:
           print("FWD")
           self.fwd()
