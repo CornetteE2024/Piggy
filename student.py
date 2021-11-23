@@ -45,7 +45,8 @@ class Piggy(PiggyParent):
                 "x": ("Skri Test", self.skri),
                 "j": ("Do A Jig", self.Do_A_Jig),
                 "l": ("Find Wall and Spin", self.spin_wall),
-                "w": ("Avoid boxes", self.Avoid_Box)
+                "w": ("Avoid boxes", self.Avoid_Box),
+                "g": ("Shorter Wall", self.To_Be_Short_Or_Not_To_Be)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -60,6 +61,41 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
+
+    def To_Be_Short_Or_Not_To_Be(self):
+       while True:
+        self.read_distance()
+        if self.read_distance() < 200:
+          self.stop()
+          self.servo(1250)
+          self.read_distance()
+          idk_1 = self.read_distance()
+          time.sleep(1)
+          self.servo(1750)
+          self.read_distance()
+          idk_2 = self.read_distance()
+          time.sleep(1)
+          self.stop()
+          if idk_1 > idk_2:
+            self.left()
+            time.sleep(1)
+            self.fwd()
+            time.sleep(2)
+            self.right()
+            time.sleep(1)
+            self.fwd()
+          elif idk_1 > idk_2:
+            self.right()
+            time.sleep(1)
+            self.fwd()
+            time.sleep(2)
+            self.left()
+            time.sleep(1)
+            self.fwd()
+        else:
+          self.fwd()
+
+
 
     def Avoid_Box(self):
       while True:
