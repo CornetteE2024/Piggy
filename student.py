@@ -83,7 +83,7 @@ class Piggy(PiggyParent):
             self.right()
             time.sleep(1)
             self.fwd()
-          elif (idk_1 > idk_2):
+          elif (idk_1 < idk_2):
             print("Right")
             self.right()
             time.sleep(1)
@@ -92,8 +92,7 @@ class Piggy(PiggyParent):
             self.left()
             time.sleep(1)
             self.fwd()
-          else:
-            print()
+          
         else:
           print("FWD")
           self.fwd()
