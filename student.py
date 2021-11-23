@@ -64,17 +64,14 @@ class Piggy(PiggyParent):
 
     def To_Be_Short_Or_Not_To_Be(self):
        while True:
-        self.read_distance()
         if self.read_distance() < 200:
           self.stop()
           self.servo(1200)
-          self.read_distance()
+          time.sleep(1)
           idk_1 = self.read_distance()
-          time.sleep(1)
           self.servo(600)
-          self.read_distance()
-          idk_2 = self.read_distance()
           time.sleep(1)
+          idk_2 = self.read_distance()
           self.stop()
           if idk_1 > idk_2:
             self.left()
