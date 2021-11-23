@@ -72,7 +72,7 @@ class Piggy(PiggyParent):
           self.fwd()
           time.sleep(.75)
           self.stop()
-          self.left(primary = 40, counter = -40)
+          self.left(primary = -40, counter = 40)
           self.fwd()
           #self.servo(1750)
           #self.read_distance()
