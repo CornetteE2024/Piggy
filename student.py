@@ -74,7 +74,6 @@ class Piggy(PiggyParent):
           time.sleep(1)
           idk_2 = self.read_distance()
           print ("Right: " + str(idk_2))
-          self.stop()
           if (idk_1 > idk_2):
             print("Left")
             self.left()
