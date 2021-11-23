@@ -64,7 +64,7 @@ class Piggy(PiggyParent):
 
     def To_Be_Short_Or_Not_To_Be(self):
        while True:
-        if self.read_distance() < 200:
+        if (self.read_distance() < 200):
           self.stop()
           self.servo(1200)
           time.sleep(1)
@@ -75,7 +75,7 @@ class Piggy(PiggyParent):
           idk_2 = self.read_distance()
           print ("Right: " + str(idk_2))
           self.stop()
-          if idk_1 > idk_2:
+          if (idk_1 > idk_2):
             print("Left")
             self.left()
             time.sleep(1)
@@ -84,7 +84,7 @@ class Piggy(PiggyParent):
             self.right()
             time.sleep(1)
             self.fwd()
-          elif idk_1 > idk_2:
+          elif (idk_1 > idk_2):
             print("Right")
             self.right()
             time.sleep(1)
