@@ -92,20 +92,20 @@ class Piggy(PiggyParent):
           if (idka_1 > idka_2):
             print("Left")
             self.left()
-            time.sleep(1)
+            time.sleep(.75)
             self.fwd()
-            time.sleep(2)
-            self.right()
             time.sleep(1)
+            self.right()
+            time.sleep(.75)
             self.fwd()
           elif (idka_1 < idka_2):
             print("Right")
             self.right()
-            time.sleep(1)
+            time.sleep(.75)
             self.fwd()
-            time.sleep(2)
-            self.left()
             time.sleep(1)
+            self.left()
+            time.sleep(.75)
             self.fwd()
 
 
