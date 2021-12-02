@@ -78,7 +78,7 @@ class Piggy(PiggyParent):
         time.sleep(.75)
         idk_2 = self.read_distance()
 
-        elif (idk_2 < 200):
+        if (idk_2 < 200):
           self.stop()
           self.servo(self.MIDPOINT + 300)
           time.sleep(1)
@@ -113,7 +113,7 @@ class Piggy(PiggyParent):
         time.sleep(.75)
         idk_3 = self.read_distance()
 
-        elif (idk_3 < 200):
+        if (idk_3 < 200):
           self.left(primary=90, counter=-40)
 
 
