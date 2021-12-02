@@ -65,6 +65,7 @@ class Piggy(PiggyParent):
 
     def Ultimate_Avoidance(self):
       while True:
+        self.fwd()
         self.servo(self.MIDPOINT + 300)
         time.sleep(.75)
         idk_1 = self.read_distance()
@@ -110,9 +111,6 @@ class Piggy(PiggyParent):
 
         elif (idk_3 < 200):
           self.deg_fwd(primary=40, counter=-90)
-
-        else:
-          self.fwd
 
 
 
