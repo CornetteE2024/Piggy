@@ -46,7 +46,8 @@ class Piggy(PiggyParent):
                 "j": ("Do A Jig", self.Do_A_Jig),
                 "l": ("Find Wall and Spin", self.spin_wall),
                 "w": ("Avoid boxes", self.Avoid_Box),
-                "g": ("Shorter Wall", self.To_Be_Short_Or_Not_To_Be)
+                "g": ("Shorter Wall", self.To_Be_Short_Or_Not_To_Be),
+                "u": ("Ultimate Avoidance of Your Actions in Life", self.Ultimate_Avoidance)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -61,6 +62,56 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
+
+    def Ultimate_Avoidance(self):
+      while True:
+        self.servo(self.MIDPOINT + 300)
+        idk_1 = self.read_distance()
+        self.servo(self.MIDPOINT)
+        idk_2 = self.read_distance()
+        self.servo(self.MIDPOINT - 300)
+        idk_3 = self.read_distance()
+
+        if (idk_1 < 200):
+          self.deg_fwd(primary=90, counter=-40)
+
+        elif (idk_2 < 200):
+          self.stop()
+          self.servo(self.MIDPOINT + 300)
+          time.sleep(1)
+          idka_1 = self.read_distance()
+          print ("leFt: " + str(idk_1))
+          self.servo(self.MIDPOINT - 300)
+          time.sleep(1)
+          idka_2 = self.read_distance()
+          print ("Right: " + str(idk_2))
+          self.servo(self.MIDPOINT)
+          if (idka_1 > idka_2):
+            print("Left")
+            self.left()
+            time.sleep(1)
+            self.fwd()
+            time.sleep(2)
+            self.right()
+            time.sleep(1)
+            self.fwd()
+          elif (idka_1 < idka_2):
+            print("Right")
+            self.right()
+            time.sleep(1)
+            self.fwd()
+            time.sleep(2)
+            self.left()
+            time.sleep(1)
+            self.fwd()
+
+        elif (idk_3 < 200):
+          self.deg_fwd(primary=40, counter=-90)
+
+        else:
+          self.fwd
+
+
 
     def To_Be_Short_Or_Not_To_Be(self):
        while True:
