@@ -114,7 +114,7 @@ class Piggy(PiggyParent):
         idk_3 = self.read_distance()
 
         elif (idk_3 < 200):
-          self.left(primary=90, counter=-90)
+          self.left(primary=90, counter=-40)
 
 
 
