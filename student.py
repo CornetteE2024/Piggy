@@ -34,20 +34,20 @@ class Piggy(PiggyParent):
         ## This is a DICTIONARY, it's a list with custom index values. Python is cool.
         # Please feel free to change the menu and add options.
         print("\n *** MENU ***") 
-        menu = {"n": ("Navigate", self.nav),
-                "d": ("Dance", self.dance),
-                "o": ("Obstacle count", self.obstacle_count),
-                "s": ("Shy", self.shy),
-                "f": ("Follow", self.follow),
-                "c": ("Calibrate", self.calibrate),
-                "q": ("Quit", self.quit),
-                "v": ("Vanek Test", self.vanek),
-                "x": ("Skri Test", self.skri),
-                "j": ("Do A Jig", self.Do_A_Jig),
-                "l": ("Find Wall and Spin", self.spin_wall),
-                "w": ("Avoid boxes", self.Avoid_Box),
-                "g": ("Shorter Wall", self.To_Be_Short_Or_Not_To_Be),
-                "u": ("The Ultimate Avoidance of the Consequences of Your Life Choices", self.Ultimate_Avoidance)
+        menu = {"n": (" Navigate", self.nav),
+                "d": (" Dance", self.dance),
+                "o": (" Obstacle count", self.obstacle_count),
+                "s": (" Shy", self.shy),
+                "f": (" Follow", self.follow),
+                "c": (" Calibrate", self.calibrate),
+                "q": (" Quit", self.quit),
+                "v": (" Vanek Test", self.vanek),
+                "x": (" Skri Test", self.skri),
+                "j": (" Do A Jig", self.Do_A_Jig),
+                "l": (" Find Wall and Spin", self.spin_wall),
+                "w": (" Avoid boxes", self.Avoid_Box),
+                "g": (" Shorter Wall", self.To_Be_Short_Or_Not_To_Be),
+                "u": (" The Ultimate Avoidance of the Consequences of Your Life Choices", self.Ultimate_Avoidance)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
