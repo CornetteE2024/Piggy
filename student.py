@@ -47,7 +47,7 @@ class Piggy(PiggyParent):
                 "l": ("Find Wall and Spin", self.spin_wall),
                 "w": ("Avoid boxes", self.Avoid_Box),
                 "g": ("Shorter Wall", self.To_Be_Short_Or_Not_To_Be),
-                "u": ("Ultimate Avoidance of Your Actions in Life", self.Ultimate_Avoidance)
+                "u": ("Ultimate Avoidance of the Consequences of Your Life Choices", self.Ultimate_Avoidance)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
