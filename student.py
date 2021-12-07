@@ -223,13 +223,9 @@ class Piggy(PiggyParent):
 #Decided to keep the Vanek Test anyways for reference
 
     def vanek(self):
-      while True:
-        self.read_distance()
-        if self.read_distance() < 100:
-          self.stop()
-          break
-        else:
-          self.fwd()
+      self.left(primary = 80. counter  = 30)
+      time.sleep(1)
+     
         
 
 
