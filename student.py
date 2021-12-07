@@ -67,11 +67,12 @@ class Piggy(PiggyParent):
       while True:
         self.fwd()
         self.servo(self.MIDPOINT + 300)
-        time.sleep(.75)
+        time.sleep(.25)
 
         idk_1 = self.read_distance()
         if (idk_1 < 200):
           self.stop()
+          print ("swerving left")
           self.right(primary=90, counter=60)
           time.sleep(1)
           self.left(primary=90, counter=60)
@@ -80,7 +81,7 @@ class Piggy(PiggyParent):
 
 
         self.servo(self.MIDPOINT)
-        time.sleep(.75)
+        time.sleep(.25)
         idk_2 = self.read_distance()
 
         if (idk_2 < 200):
@@ -88,7 +89,7 @@ class Piggy(PiggyParent):
 
 
         self.servo(self.MIDPOINT - 300)
-        time.sleep(.75)
+        time.sleep(.25)
         idk_3 = self.read_distance()
 
         if (idk_3 < 200):
