@@ -72,7 +72,11 @@ class Piggy(PiggyParent):
         idk_1 = self.read_distance()
         if (idk_1 < 200):
           self.stop()
-          self.right(primary=90, counter=-40)
+          self.right(primary=90, counter=60)
+          time.sleep(1)
+          self.left(primary=90, counter=60)
+          time.sleep(1)
+          self.stop()
 
 
         self.servo(self.MIDPOINT)
@@ -80,34 +84,7 @@ class Piggy(PiggyParent):
         idk_2 = self.read_distance()
 
         if (idk_2 < 200):
-          self.stop()
-          self.servo(self.MIDPOINT + 300)
-          time.sleep(1)
-          idka_1 = self.read_distance()
-          print ("leFt: " + str(idk_1))
-          self.servo(self.MIDPOINT - 300)
-          time.sleep(1)
-          idka_2 = self.read_distance()
-          print ("Right: " + str(idk_2))
-          self.servo(self.MIDPOINT)
-          if (idka_1 > idka_2):
-            print("Left")
-            self.left()
-            time.sleep(.75)
-            self.fwd()
-            time.sleep(1)
-            self.right()
-            time.sleep(.75)
-            self.fwd()
-          elif (idka_1 < idka_2):
-            print("Right")
-            self.right()
-            time.sleep(.75)
-            self.fwd()
-            time.sleep(1)
-            self.left()
-            time.sleep(.75)
-            self.fwd()
+          self.To_Be_Short_Or_Not_To_Be_Short()
 
 
         self.servo(self.MIDPOINT - 300)
@@ -116,7 +93,43 @@ class Piggy(PiggyParent):
 
         if (idk_3 < 200):
           self.stop()
-          self.left(primary=90, counter=-40)
+          self.left(primary=90, counter=60)
+          time.sleep(1)
+          self.right(primary=90. counter=60)
+          time.sleep(1)
+          self.stop()
+
+
+
+    def To_Be_Short_Or_Not_To_Be_Short(self):
+          self.stop()
+          self.servo(self.MIDPOINT + 300)
+          time.sleep(1)
+          idk_1 = self.read_distance()
+          print ("leFt: " + str(idk_1))
+          self.servo(self.MIDPOINT - 300)
+          time.sleep(1)
+          idk_2 = self.read_distance()
+          print ("Right: " + str(idk_2))
+          self.servo(self.MIDPOINT)
+          if (idk_1 > idk_2):
+            print("Left")
+            self.left()
+            time.sleep(1)
+            self.fwd()
+            time.sleep(2)
+            self.right()
+            time.sleep(1)
+            self.fwd()
+          elif (idk_1 < idk_2):
+            print("Right")
+            self.right()
+            time.sleep(1)
+            self.fwd()
+            time.sleep(2)
+            self.left()
+            time.sleep(1)
+            self.fwd()
 
 
 
