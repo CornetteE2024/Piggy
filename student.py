@@ -223,7 +223,7 @@ class Piggy(PiggyParent):
 #Decided to keep the Vanek Test anyways for reference
 
     def vanek(self):
-      self.left(primary = 80. counter  = 30)
+      self.left(primary = 80, counter  = 30)
       time.sleep(1)
      
         
