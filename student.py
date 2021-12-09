@@ -48,7 +48,7 @@ class Piggy(PiggyParent):
                 "w": (" Avoid boxes", self.Avoid_Box),
                 "g": (" Shorter Wall", self.To_Be_Short_Or_Not_To_Be),
                 "u": (" The Ultimate Avoidance of the Consequences of Your Life Choices", self.Ultimate_Avoidance),
-                "m": ("Maze Runner but Christopher Paolini Style", self.Maze_Runner)
+                "m": (" Maze Runner but Christopher Paolini Style", self.Maze_Runner)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
