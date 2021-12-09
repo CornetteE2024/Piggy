@@ -47,7 +47,8 @@ class Piggy(PiggyParent):
                 "l": (" Find Wall and Spin", self.spin_wall),
                 "w": (" Avoid boxes", self.Avoid_Box),
                 "g": (" Shorter Wall", self.To_Be_Short_Or_Not_To_Be),
-                "u": (" The Ultimate Avoidance of the Consequences of Your Life Choices", self.Ultimate_Avoidance)
+                "u": (" The Ultimate Avoidance of the Consequences of Your Life Choices", self.Ultimate_Avoidance),
+                "m": ("Maze Runner but Christopher Paolini Style", self.Maze_Runner)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -63,6 +64,10 @@ class Piggy(PiggyParent):
     ****************
     '''
 
+    def Maze_Runner(self):
+
+
+
     def Ultimate_Avoidance(self):
       while True:
         self.fwd()
@@ -74,9 +79,9 @@ class Piggy(PiggyParent):
           self.stop()
           print ("swerving left")
           self.right(primary=90, counter=60)
-          time.sleep(1)
+          time.sleep(.75)
           self.left(primary=90, counter=60)
-          time.sleep(1)
+          time.sleep(.75)
           self.stop()
 
 
@@ -95,9 +100,9 @@ class Piggy(PiggyParent):
         if (idk_3 < 200):
           self.stop()
           self.left(primary=90, counter=60)
-          time.sleep(1)
+          time.sleep(.75)
           self.right(primary=90, counter=60)
-          time.sleep(1)
+          time.sleep(.75)
           self.stop()
 
 
