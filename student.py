@@ -65,6 +65,7 @@ class Piggy(PiggyParent):
     '''
 
     def Maze_Runner(self):
+      return
 
 
 
