@@ -94,7 +94,7 @@ class Piggy(PiggyParent):
 
 
 
-   def To_Be_Short_Or_Not_To_Be_Short_4_Maze_Runner(self):
+    def To_Be_Short_Or_Not_To_Be_Short_4_Maze_Runner(self):
           self.stop()
           self.servo(self.MIDPOINT + 300)
           time.sleep(1)
