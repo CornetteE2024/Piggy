@@ -94,9 +94,10 @@ class Piggy(PiggyParent):
           elif (front2 < 200 and rightfront < 200 and leftfront < 200):
             self.right()
             time.sleep(1.5)
+          """
           else:
             self.To_Be_Short_Or_Not_To_Be_Short_4_Maze_Runner()
-      return
+      """
 
 
 
