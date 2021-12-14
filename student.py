@@ -74,9 +74,14 @@ class Piggy(PiggyParent):
         if (front1 < 200):
           self.stop()
           self.servo(self.MIDPOINT + 300)
+          time.sleep(.25)
           rightfront = self.read_distance()
           self.servo(self.MIDPOINT - 300)
+          time.sleep(.25)
           leftfront = self.read_distance()
+          self.servo(self.MIDPOINT)
+          time.sleep(.25)
+          front2 = self.read_distance()
           if (rightfront < 200, leftfront > 200):
             self.left()
             time.sleep(.75)
@@ -85,7 +90,7 @@ class Piggy(PiggyParent):
             self.right()
             time.sleep(.75)
             self.stop()
-          elif (front1 < 200, rightfront < 200, leftfront < 200):
+          elif (front2 < 200, rightfront < 200, leftfront < 200):
             self.right()
             time.sleep(1.5)
           else:
@@ -97,11 +102,11 @@ class Piggy(PiggyParent):
     def To_Be_Short_Or_Not_To_Be_Short_4_Maze_Runner(self):
           self.stop()
           self.servo(self.MIDPOINT + 300)
-          time.sleep(1)
+          time.sleep(.25)
           idk_1 = self.read_distance()
 
           self.servo(self.MIDPOINT - 300)
-          time.sleep(1)
+          time.sleep(.25)
           idk_2 = self.read_distance()
           
           self.servo(self.MIDPOINT)
