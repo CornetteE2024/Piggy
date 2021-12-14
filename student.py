@@ -44,7 +44,7 @@ class Piggy(PiggyParent):
                 "v": (" Vanek Test", self.vanek),
                 "x": (" Skri Test", self.skri),
                 "j": (" Do A Jig", self.Do_A_Jig),
-                "l": (" Go Find Wall and Spin 'Round 'n 'Round''", self.spin_wall),
+                "l": (" Go Find Wall and Spin 'Round 'n 'Round", self.spin_wall),
                 "w": (" Avoid All the Boxes", self.Avoid_Box),
                 "g": (" Just Find the Shorter Wall for Crying Out Loud", self.To_Be_Short_Or_Not_To_Be),
                 "u": (" The Ultimate Avoidance of the Consequences of Your Life Choices", self.Ultimate_Avoidance),
