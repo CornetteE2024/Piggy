@@ -67,34 +67,36 @@ class Piggy(PiggyParent):
     def Maze_Runner(self):
       while True:
         self.fwd()
+        """
         self.servo(self.MIDPOINT)
         time.sleep(.25)
         front1 = self.read_distance()
 
         if (front1 < 200):
+          """
+        self.stop()
+        self.servo(self.MIDPOINT + 300)
+        time.sleep(.25)
+        rightfront = self.read_distance()
+        self.servo(self.MIDPOINT - 300)
+        time.sleep(.25)
+        leftfront = self.read_distance()
+        self.servo(self.MIDPOINT)
+        time.sleep(.25)
+        front2 = self.read_distance()
+        if (rightfront < 200, leftfront > 200):
+          self.left()
+          time.sleep(.75)
           self.stop()
-          self.servo(self.MIDPOINT + 300)
-          time.sleep(.25)
-          rightfront = self.read_distance()
-          self.servo(self.MIDPOINT - 300)
-          time.sleep(.25)
-          leftfront = self.read_distance()
-          self.servo(self.MIDPOINT)
-          time.sleep(.25)
-          front2 = self.read_distance()
-          if (rightfront < 200, leftfront > 200):
-            self.left()
-            time.sleep(.75)
-            self.stop()
-          elif (leftfront < 200, rightfront > 200):
-            self.right()
-            time.sleep(.75)
-            self.stop()
-          elif (front2 < 200, rightfront < 200, leftfront < 200):
-            self.right()
-            time.sleep(1.5)
-          else:
-            self.To_Be_Short_Or_Not_To_Be_Short_4_Maze_Runner()
+        elif (leftfront < 200, rightfront > 200):
+          self.right()
+          time.sleep(.75)
+          self.stop()
+        elif (front2 < 200, rightfront < 200, leftfront < 200):
+          self.right()
+          time.sleep(1.5)
+        else:
+          self.To_Be_Short_Or_Not_To_Be_Short_4_Maze_Runner()
       return
 
 
