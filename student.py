@@ -74,12 +74,15 @@ class Piggy(PiggyParent):
           self.servo(self.MIDPOINT + 300)
           time.sleep(.25)
           rightfront = self.read_distance()
+
           self.servo(self.MIDPOINT - 300)
           time.sleep(.25)
           leftfront = self.read_distance()
+          
           self.servo(self.MIDPOINT)
           time.sleep(.25)
           front2 = self.read_distance()
+
           if (rightfront < 200 and leftfront > 200):
             self.left()
             time.sleep(.75)
