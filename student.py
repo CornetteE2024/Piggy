@@ -34,19 +34,19 @@ class Piggy(PiggyParent):
         ## This is a DICTIONARY, it's a list with custom index values. Python is cool.
         # Please feel free to change the menu and add options.
         print("\n *** MENU ***") 
-        menu = {"n": (" Navigate", self.nav),
+        menu = {"n": (" Navigate the World", self.nav),
                 "d": (" Dance", self.dance),
-                "o": (" Obstacle count", self.obstacle_count),
-                "s": (" Shy", self.shy),
-                "f": (" Follow", self.follow),
+                "o": (" Obstacle counting", self.obstacle_count),
+                "s": (" Shy Greg", self.shy),
+                "f": (" Follow the Leader", self.follow),
                 "c": (" Calibrate", self.calibrate),
-                "q": (" Quit", self.quit),
+                "q": (" Quit at Life", self.quit),
                 "v": (" Vanek Test", self.vanek),
                 "x": (" Skri Test", self.skri),
                 "j": (" Do A Jig", self.Do_A_Jig),
-                "l": (" Find Wall and Spin", self.spin_wall),
-                "w": (" Avoid boxes", self.Avoid_Box),
-                "g": (" Shorter Wall", self.To_Be_Short_Or_Not_To_Be),
+                "l": (" Go Find Wall and Spin 'Round 'n 'Round''", self.spin_wall),
+                "w": (" Avoid All the Boxes", self.Avoid_Box),
+                "g": (" Just Find the Shorter Wall for Crying Out Loud", self.To_Be_Short_Or_Not_To_Be),
                 "u": (" The Ultimate Avoidance of the Consequences of Your Life Choices", self.Ultimate_Avoidance),
                 "m": (" Maze Runner but Christopher Paolini Style", self.Maze_Runner)
                 }
