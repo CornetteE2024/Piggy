@@ -67,11 +67,9 @@ class Piggy(PiggyParent):
     def Maze_Runner(self):
       while True:
         self.fwd()
-        self.servo(self.MIDPOINT)
-        time.sleep(.25)
-        front1 = self.read_distance()
+        self.read_distance()
 
-        if (front1 < 200):
+        if (self.read_distance() < 200):
           self.stop()
           self.servo(self.MIDPOINT + 300)
           time.sleep(.25)
