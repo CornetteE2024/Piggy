@@ -36,7 +36,7 @@ class Piggy(PiggyParent):
         print("\n *** MENU ***") 
         menu = {"n": (" Navigate the World", self.nav),
                 "d": (" Dance", self.dance),
-                "o": (" Obstacle counting", self.obstacle_count),
+                "o": (" Obstacle Counting", self.obstacle_count),
                 "s": (" Shy Greg", self.shy),
                 "f": (" Follow the Leader", self.follow),
                 "c": (" Calibrate", self.calibrate),
